@@ -1,12 +1,18 @@
 package mergeAlternatively;
 
 /**
+ * Problem:
+ * <pre>
+ * Problem Name: Merge Strings Alternately
+ * Problem Difficulty: Easy
+ * </pre>
+ * Solution Stats:
  * <pre>
  * Runtime: 2ms
  * Runtime Rank: Beats 32.25% of users with Java 
  * Memory: 42.78MB
  * Memory Rank: Beats 15.33% of users with Java
- * <pre>
+ * </pre>
  * @version Date: March 9th 2024
  * @author Tristan Mbugua
  */

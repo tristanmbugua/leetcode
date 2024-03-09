@@ -1,13 +1,23 @@
 package longestSubstringWithoutRepeatingCharacters;
 
 /**
+ * Problem:
+ * <pre>
+ * Problem Name: Longest Substring Without Repeating Characters
+ * Problem Difficulty: Medium.
+ * </pre>
+ * Solution Stats:
+ * <pre>
  * Date: March 8th 2024
  * Runtime: 396ms
  * Runtime Rank: Beats 5.00% of users with Java
  * Memory: 45.27MB
  * Memory Rank: Beats 14.57% of users with Java
+ * </pre>
+ * @version Date: March 9th 2024
  * @author Tristan Mbugua
  */
+
 public class Driver {
 
 	public static void main(String[] args) {

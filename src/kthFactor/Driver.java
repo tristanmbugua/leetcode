@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Problem:
+ * <pre>
+ * Problem Name: The kth Factor of n
+ * Problem Difficulty: medium.
+ * </pre>
+ * Solution Stats:
  * <pre>
  * Runtime: 6ms
  * Runtime Rank: Beats 5.03% of users with Java 
