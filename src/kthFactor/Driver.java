@@ -7,7 +7,7 @@ import java.util.List;
  * Problem:
  * <pre>
  * Problem Name: The kth Factor of n
- * Problem Difficulty: medium.
+ * Problem Difficulty: Medium.
  * </pre>
  * Solution Stats:
  * <pre>
