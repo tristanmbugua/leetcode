@@ -10,10 +10,10 @@ import mergeKSortedLists.ListNode;
  * </pre>
  * Solution Stats:
  * <pre>
- * Runtime: 2ms
- * Runtime Rank: Beats 40.65% of users with Java 
- * Memory: 45.95MB
- * Memory Rank: Beats 98.50% of users with Java
+ * Runtime: 1ms
+ * Runtime Rank: Beats 100.00% of users with Java 
+ * Memory: 46.08MB
+ * Memory Rank: Beats 97.29% of users with Java
  * </pre>
  * @version Date: March 20th 2024
  * @author Tristan Mbugua
@@ -51,7 +51,7 @@ public class MergeInBetweenLinkedLists {
         ListNode nodeStart = null;
         ListNode nodeEnd = null;
         
-        for (int i = 1; oldList != null; i++) {
+        for (int i = 1; nodeEnd == null; i++) {
 			if (i == a) {
 				nodeStart = oldList;
 			}
