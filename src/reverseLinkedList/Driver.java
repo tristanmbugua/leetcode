@@ -14,12 +14,12 @@ import mergeKSortedLists.ListNode;
  * </pre>
  * Solution Stats:
  * <pre>
- * Runtime: 1ms
- * Runtime Rank: Beats 5.37% of users with Java 
- * Memory: 42.33MB
- * Memory Rank: Beats 54.90% of users with Java
+ * Runtime: 0ms
+ * Runtime Rank: Beats 100.00% of users with Java 
+ * Memory: 42.46MB
+ * Memory Rank: Beats 40.27% of users with Java
  * </pre>
- * @version Date: March 10th 2024
+ * @version Date: March 20th 2024
  * @author Tristan Mbugua
  */
 public class Driver {
@@ -38,39 +38,27 @@ public class Driver {
 				ListNode(11, null
 						)))))))))));
 		
-		printList(head);
-		printList(reverseLinkedList(head));
+		head = reverseLinkedList(head);
+		System.out.println("");
 //		printList(head);
 	}
 	
 	public static ListNode reverseLinkedList(ListNode head) {
-		//Pull Values
-		Stack<Integer> list = new Stack<Integer>();
-		if (head != null) {
-			ListNode copy = new ListNode(head.val, head.next);
-			while(copy.next != null) {
-				list.push(copy.val);
-				copy = copy.next;
-			}
-			list.push(copy.val);
+		ListNode prev = null;
+		ListNode curr = head;
+		ListNode next = head.next;
+		
+		while (curr.next != null) {
+			next = curr.next;
+			curr.next = prev;
 			
-			//Fill values
-			copy = head;
-			while (head.next != null && list.size() > 0) {
-				head.val = list.pop();
-				head = head.next;
-			}
-			head.val = list.pop();
-			return copy;
-		} else {
-			return head;
+			prev = curr;
+			curr = next;
 		}
-	}
-	
-	public static void printList(ListNode head) {
-		while (head != null) {
-			System.out.println(head.val);
-			head = head.next;
-		}
+		
+		next = curr.next;
+		curr.next = prev;
+		
+		return curr;
 	}
 }
