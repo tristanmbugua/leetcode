@@ -86,7 +86,7 @@ public class Driver {
 		if (current != null) {
 			stack.add(current.val);
 			reverseLinkedList(current.next, stack);
-			current.val = stack.removeFirst();
+//			current.val = stack.removeFirst();
 		}
 		return;
 	}

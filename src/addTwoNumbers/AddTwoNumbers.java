@@ -41,61 +41,40 @@ public class AddTwoNumbers {
 		
 		addTwoNumbers(l1, l2);
 	}
+	
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-		//Reverse the remainder
+		//The problem here is managing remainders.
+		
 		int remainder = 0;
 		int sum = 0;
-		ListNode list = new ListNode();
-		ListNode returnList = list;
+		ListNode head = new ListNode();
 		
 		
-		while(l1 != null || l2 != null) {
-			list.next = new ListNode();
-			list = list.next;
+		ListNode curr = new ListNode();
+		head.next = curr;
+		
+		while (l1 != null || l2 != null) {
 			
-			if (l1 != null && l2 == null) {
-				//Only l1 is active.
-				
-				//Find sum
-				sum = l1.val + remainder;
-				//Find remainder
-				remainder = sum / 10;
-				//Set value
-				list.val = sum % 10;
-			} else if (l2 != null && l1 == null) {
-				//Only l2 is active.
-				
-				//Find sum
-				sum = l2.val + remainder;
-				//Find remainder
-				remainder = sum / 10;
-				//Set value
-				list.val = sum % 10;
-			} else {
-				//Both nodes are active.
-				
-				//Find sum
+			//Case 1: Both nodes active
+			if (l1 != null && l2 != null) {
 				sum = l1.val + l2.val + remainder;
-				//Find remainder
-				remainder = sum / 10;
-				//Set value
-				list.val = sum % 10;
+				remainder = sum % 9;
+				
+				curr.val = remainder;
+				remainder -= sum;
+				
 			}
-			sum = 0;
-			
-			try { l1 = l1.next; } catch (Exception e) {}
-			
-			try { l2 = l2.next; } catch (Exception e) {}
-			
+			//Case 2: Only l1 node active
+			else if (l1 != null && l2 == null) {
+				
+			}
+			//Case 3: Only l2 node active
+			 else if (l1 != null && l2 == null) {
+				 
+			 }
 		}
 		
-		if (remainder > 0) {
-			list.next = new ListNode();
-			list = list.next;
-			list.val += remainder;
-		}
 		
-		returnList = returnList.next;
-		return returnList;
+		return head;
 	}
 }

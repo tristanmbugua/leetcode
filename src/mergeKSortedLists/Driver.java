@@ -75,7 +75,7 @@ public class Driver {
 			}
 			if (values.size() > 0) {
 				values = sortList(values);
-				head = fillList(head, values);
+//				head = fillList(head, values);
 			} else {
 				return null;
 			}
@@ -101,18 +101,18 @@ public class Driver {
 		return list;
 	}
 	
-	public static ListNode fillList(ListNode head, List<Integer> list) {
-		ListNode copy = head;
-		while (list.size() > 1) {
-			copy.val = list.removeFirst();
-			copy.next = new ListNode();
-			copy = copy.next;
-		}
-		copy.val = list.removeFirst();
-		copy.next = null;
-		return head;
-	}
-	
+//	public static ListNode fillList(ListNode head, List<Integer> list) {
+//		ListNode copy = head;
+//		while (list.size() > 1) {
+//			copy.val = list.removeFirst();
+//			copy.next = new ListNode();
+//			copy = copy.next;
+//		}
+//		copy.val = list.removeFirst();
+//		copy.next = null;
+//		return head;
+//	}
+//	
 	public static void printList(ListNode head) {
 		while (head.next != null) {
 			System.out.println(head.val);
