@@ -12,7 +12,7 @@ public class FrequencySort {
     public static int[] frequencySort(int[] nums) {
 
         //Make a HashMap with the occurences.
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
 
         for (int i = 0; i < nums.length; i++) {
